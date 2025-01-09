@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praroz - Web Design & Development</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        body {
+            color: #FFFFFF;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #000;
+        }
+        .logo {
+            color: #FF9906;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        span{
+        color:#FF9906;
+        }
+        a{
+        color:#FF9906;
+        text-decoration:none;
+        }
+        .nav-links a:hover {
+            color: #FF0000;
+        }
+        .search-login {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .search-login input {
+            padding: 5px 10px;
+            border: 1px solid #FFF;
+            border-radius: 5px;
+            background: transparent;
+            color: #FFF;
+        }
+        .login-btn {
+            background-color: #FF9909;
+            color: #FFF;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-btn:hover {
+            background-color: #FFF;
+            color: #FF0000;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 50px;
+            background: url('./background.jpg') no-repeat center center/cover;
+            width: 100vw;
+        }
+        .hero-left {
+            flex: 65%;
+            padding: 20px;
+        }
+        .hero-left h1 {
+            font-size: 2.5rem;
+            color: whitesmoke;
+            margin-bottom: 20px;
+        }
+        .hero-left p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .cta-btn {
+            background-color: #FF9906;
+            color: black;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-btn:hover {
+            background-color: #FFF;
+            color: #FF0000;
+        }
+
+        .hero-right {
+            flex: 35%;
+            padding: 20px;
+            background: #1A1A1A;
+            border-radius: 10px;
+        }
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .login-form h2 {
+            color: #FF0000;
+            margin-bottom: 10px;
+        }
+        .login-form input {
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #FF9906;
+            background: transparent;
+            color: #FFF;
+            outline: none;
+        }
+        .login-form input::placeholder {
+            color: #FFF;
+        }
+        .form-btn {
+            background-color: #FF9906;
+            color: #FFF;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-btn:hover {
+            background-color: #FFF;
+            color: #FF0000;
+        }
+        .social-icons i {
+            margin: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        .social-icons i:hover {
+            color: #FF0000;
+        }
+        .navbar .menu-icon {
+        display: none;
+        }
+        #white{
+        background:white;
+        color: #FF9906;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+            }
+            .hero-left {
+                width: 100%;
+            }
+            .hero-right {
+                width: 100%;
+            }
+            .search-login, .nav-links{
+            display:none;
+            }
+            
+           .navbar .menu-icon {
+           display: block;
+           }
+          
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Praroz</div>
+            <ul class="nav-links">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">DESIGN</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <div class="search-login">
+                <input type="text" placeholder="Type to text">
+                <button class="login-btn">Search</button>
+            </div>
+               <div class="menu-icon">
+               <i class="fas fa-bars"></i>
+               </div>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-left">
+            <h1>Web Design & <br> <span> Development </span><br>Course</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque expedita atque eveniet quis nesciunt. Quos nulla vero consequuntur fugit nemo a delectus a quae totam ipsa illum minus laudantium?</p>
+            <button class="cta-btn">JOIN US</button>
+        </div>
+        <div class="hero-right">
+            <form class="login-form">
+                <button type="submit" id="white" class="form-btn">Login here</button>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Retype Password" required>
+                <button type="submit" class="form-btn">Login</button>
+                <p>Don't have an account? <a href="#">Sign up here</a></p>
+                <p>Log in with</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkend"></i>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
